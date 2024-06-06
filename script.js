@@ -18,7 +18,17 @@ function copyMenu() {
 copyMenu();
 
 // =============== Show Mobile Menu ===============
+const menuButton = document.querySelector('.trigger'),
+    closeButton = document.querySelector('.t-close'),
+    addclass = document.querySelector('.site');
 
+menuButton.addEventListener('click', function () {
+    addclass.classList.toggle('showmenu')
+});
+
+closeButton.addEventListener('click', function () {
+    addclass.classList.remove('showmenu')
+});
 
 // =============== Show Sub Menu on Mobile ===============
 const submenu = document.querySelectorAll('.has-child .icon-small');
