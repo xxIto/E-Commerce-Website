@@ -283,6 +283,7 @@ h4 {
 
 
 
+
 /* --------------------
  * 01. HEADER
  * ------------------*/
@@ -293,6 +294,8 @@ h4 {
     line-height: inherit;
     transition: var(--trans-color);
 }
+
+
 
 
     /* 01. HEADER --------------------
@@ -335,6 +338,8 @@ h4 {
     .header-top li:hover ul {
         display: block;
     }
+
+
 
 
     /* 01. HEADER --------------------
@@ -437,6 +442,8 @@ h4 {
     }
 
 
+
+
     /* 01. HEADER --------------------
      *  c. Header Main, Departments Category
      * ------------------*/
@@ -490,6 +497,8 @@ h4 {
     }
 
 
+
+
     /* 01. HEADER --------------------
      *  d. Search Form
      * ------------------*/
@@ -538,6 +547,8 @@ h4 {
     form.search button:hover {
         background-color: var(--dark-color);
     }
+
+
 
 
     /* 01. HEADER --------------------
@@ -678,6 +689,7 @@ h4 {
 
 
 
+
 /* --------------------
  * 02. SLIDER
  * ------------------*/
@@ -720,7 +732,7 @@ h4 {
 
 .text-content :where(h2, h3) span:first-child {
     font-weight: var(--fw3);
-    columns: var(--light-text-color);
+    color: var(--light-text-color);
 }
 
 .text-content :where(h2, h3) span:last-child {
@@ -732,6 +744,8 @@ h4 {
 .swiper-pagination .swiper-pagination-bullet-active {
     background-color: var(--secondary-dark-color);
 }
+
+
 
 
 /* --------------------
@@ -752,6 +766,8 @@ h4 {
 .brands .item a:hover img {
     opacity: 1;
 }
+
+
 
 
 /* --------------------
@@ -1075,6 +1091,84 @@ h4 {
 
 
 /* --------------------
+ * 05. BANNER
+ * ------------------*/
+
+.banner .item {
+    position: relative;
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color);
+}
+
+.banner .image {
+    text-align: right;
+}
+
+.banner .get-grey {
+    background-color: var(--border-color);
+}
+
+.banner :where(.text-content, .over-links) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--percent100);
+    height: var(--percent100);
+}
+
+.banner .text-content {
+    padding: 1.5em 2.5em;
+}
+
+.banner h3 {
+    font-size: calc(1em + 0.5vw);
+    font-weight: var(--fw3);
+}
+
+.banner h3 span {
+    font-size: 80%;
+}
+
+.banner .primary-button {
+    z-index: 3;
+}
+
+.banners .product-categories .item {
+    display: flex;
+    padding: 1.5em;
+}
+
+.banners .product-categories .image {
+    max-width: 150px;
+}
+
+.mini-links ul {
+    font-size: var(--font-small);
+    color: var(--light-text-color);
+    margin: 1em;
+}
+
+.banners .second-links {
+    margin-top: 2em;
+}
+
+.mini-links li a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+/* --------------------
+ * 06. Footer
+ * ------------------*/
+
+
+
+
+
+
+/* --------------------
  * 15. RESPONSIVE
  * ------------------*/
 
@@ -1102,7 +1196,8 @@ h4 {
         font-size: 1.25em;
     }
 
-    .products.mini {
+    .products.mini, 
+    .banner .row {
         flex: 0 0 50%;
     }
 
@@ -1305,7 +1400,8 @@ h4 {
     }
 
     /* ----- Products ----- */
-    .trending .products {
+    .trending .products,
+    .product-categories .row {
         flex: 0 0 33.3333%;
     }
 
