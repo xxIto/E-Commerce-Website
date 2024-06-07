@@ -257,27 +257,28 @@ h4 {
         c. MINI Product
         d. MAIN Product
     05. BANNER
+    07. FOOTER
         a. New Letter
         b. Widgets
         c. Footer Info
-    06. BOTTOM MENU
+    08. BOTTOM MENU
         a. Search
-    07. OVERLAY
-    08. PAGE SINGLE
+    08. OVERLAY
+    10. PAGE SINGLE
         a. Breadcrumb
         b. Product Details
         c. Product Description
         d. Product Review
         e. Product Review Form
-    09. PAGE SINGLE: SPECIAL OFFER
-    10. PAGE CATEGORY
+    11. PAGE SINGLE: SPECIAL OFFER
+    12. PAGE CATEGORY
         a. Sidebar Products Filter
         b. Products Block
-    11. CART
-    12. PAGE CART
-    13. PAGE CHECKOUT
-    14. MODAL
-    15. RESPONSIVE
+    13. CART
+    14. PAGE CART
+    15. PAGE CHECKOUT
+    16. MODAL
+    17. RESPONSIVE
  *
  * ------------------*/
 
@@ -1195,7 +1196,7 @@ h4 {
     
     
     
-    /* 06. Footer --------------------
+    /* 06. FOOTER --------------------
      *  b. Widgets
      * ------------------*/
     
@@ -1207,7 +1208,7 @@ h4 {
     
 
     
-    /* 06. Footer --------------------
+    /* 06. FOOTER --------------------
      *  c. Footer Info
      * ------------------*/
     
@@ -1250,7 +1251,93 @@ h4 {
 
 
 /* --------------------
- * 15. RESPONSIVE
+ * 08. BOTTOM MENU
+ * ------------------*/
+
+.menu-bottom {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 60px;
+    background-color: var(--white-color);
+    box-shadow: 0 -2px 10px rgb(0 0 0 / 10%);
+    z-index: 900;
+}
+
+.menu-bottom nav li {
+    flex: 1;
+}
+
+.menu-bottom nav li a {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5em 0;
+    color: var(--light-text-color);
+    transition: var(--trans-color);
+}
+
+.menu-bottom nav li a:hover {
+    color: var(--dark-color);
+}
+
+.menu-bottom nav li a span {
+    font-size: var(--font-smaller);
+}
+
+.menu-bottom nav li a i {
+    font-size: 1.25em;
+}
+
+.menu-bottom .fly-item {
+    right: 50%;
+    width: 16px;
+    border-radius: var(--percent50);
+    margin-right: -20px;
+    background-color: var(--secondary-dark-color);
+}
+
+
+
+
+    /* 08. BOTTOM MENU --------------------
+     *  a. Search
+     * ------------------*/
+
+    .search-bottom {
+        position: fixed;
+        bottom: 60px;
+        width: var(--percent100);
+        padding: 2.5em 0;
+        background-color: var(--secondary-dark-color);
+        z-index: 1000;
+        visibility: hidden;
+        opacity: 0;
+        will-change: visibility, opacity;
+    }
+
+    .showsearch .search-bottom {
+        visibility: inherit;
+        opacity: 1;
+    }
+
+    .search-bottom .t-close {
+        position: absolute;
+        top: -54px;
+        right: 0;
+    }
+
+    .search-bottom .t-close:hover {
+        background-color: var(--primary-color);
+    }
+
+
+
+
+/* --------------------
+ * 16. RESPONSIVE
  * ------------------*/
 
 @media screen and (min-width: 481px) {
