@@ -17,6 +17,7 @@ function copyMenu() {
 }
 copyMenu();
 
+
 // =============== Show Mobile Menu ===============
 const menuButton = document.querySelector(".trigger"),
     closeButton = document.querySelector(".t-close"),
@@ -29,6 +30,7 @@ menuButton.addEventListener("click", function () {
 closeButton.addEventListener("click", function () {
     addclass.classList.remove("showmenu");
 });
+
 
 // =============== Show Sub Menu on Mobile ===============
 const submenu = document.querySelectorAll(".has-child .icon-small");
@@ -43,6 +45,7 @@ function toggle(e) {
     this.closest(".has-child").classList.toggle("expand");
 }
 
+
 // =============== Slider ===============
 const swiper = new Swiper(".swiper", {
     loop: true,
@@ -51,6 +54,7 @@ const swiper = new Swiper(".swiper", {
         el: ".swiper-pagination",
     },
 });
+
 
 // =============== Show Search ===============
 const searchButton = document.querySelector('.t-search'),
@@ -62,6 +66,44 @@ searchButton.addEventListener('click', function () {
 tClose.addEventListener('click', function () {
     showClass.classList.remove('showsearch')
 })
+
+
+// =============== Show dpt menu ===============
+const dptButton = document.querySelector('.dpt-cat .dpt-trigger'),
+    dptClass = document.querySelector('.site');
+dptButton.addEventListener('click', function () {
+    dptClass.classList.toggle('showdpt')
+});
+
+
+// =============== Product Image Slider ===============
+var productThumb = new Swiper('.small-image', {
+    loop: true,
+    spaceBetween: 10,
+    slidesPerView: 3,
+    freeMode: true,
+    watchSlidesProgress: true,
+    breakpoints: {
+        482: {
+            spaceBetween: 32,
+        }
+    }
+});
+
+var productBig = new Swiper('.big-image', {
+    loop: true,
+    autoHeight: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    thumbs: {
+        swiper: productThumb,
+    }
+});
+
+
+
 
 /* ===============
  *
