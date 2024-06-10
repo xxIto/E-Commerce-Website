@@ -136,6 +136,15 @@ document.addEventListener('click', (e) => {
 })
 
 
+// =============== Show Modal ===============
+window.onload = function () {
+    document.querySelector('.site').classList.toggle('showmodal')
+}
+document.querySelector('.modalclose').addEventListener('click', function () {
+    document.querySelector('.site').classList.remove('showmodal')
+})
+
+
 
 
 
